@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 
-public class Main {
+public class SynchronizedTest {
     static Object obj = new Object();
 
     public static void main(String[] args) {
@@ -24,6 +24,7 @@ public class Main {
 
 
     }
+
     static void asc(ArrayList<Integer> array) {
         synchronized (obj) {
             Collections.sort(array);
