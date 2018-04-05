@@ -12,14 +12,14 @@ public class SemaphoreTest {
         Scanner scanner = new Scanner(System.in);
         final Semaphore semaphore = new Semaphore(MAX_AVAILABLE, true);
 
-        System.out.println("Введите a: ");
-        int a = scanner.nextInt();
-        System.out.println("Введите b: ");
-        int b = scanner.nextInt();
-        System.out.println("Введите c: ");
-        int c = scanner.nextInt();
+//        System.out.println("Введите a: ");
+//        int a = scanner.nextInt();
+//        System.out.println("Введите b: ");
+//        int b = scanner.nextInt();
+//        System.out.println("Введите c: ");
+//        int c = scanner.nextInt();
 
-    //    int a = 3, b = -18, c = 27;
+        int a = 3, b = -18, c = 27;
 
         new Thread(() -> {
             try {
