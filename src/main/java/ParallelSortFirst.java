@@ -1,8 +1,9 @@
 import java.util.*;
 import java.util.concurrent.CountDownLatch;
 
-public class ParallelSort {
+public class ParallelSortFirst {
     private static final int THREAD_COUNT = 3;
+    private static final int ARRAY_LENGHT = 10000;
     private static final int MAX_AVAILABLE = THREAD_COUNT;
     private static final CountDownLatch START = new CountDownLatch(MAX_AVAILABLE);
     private static long startTime;
@@ -14,9 +15,18 @@ public class ParallelSort {
         Random random = new Random();
         ArrayList<Integer> mainArray = new ArrayList<>();
 
-        for (int i = 0; i < 10000; i++) {
+        for (int i = 0; i < ARRAY_LENGHT; i++) {
             mainArray.add(random.nextInt(1000));
         }
+
+//
+//        for (int i = 0; i < ARRAY_LENGHT/2; i++) {
+//            mainArray.add(random.nextInt(50));
+//        }
+//        for (int i = 0; i < ARRAY_LENGHT/2; i++) {
+//            mainArray.add(random.nextInt(1000)+200);
+//        }
+
 
         int step = Math.round(mainArray.size() / THREAD_COUNT);
         ArrayList<List<Integer>> subArrays = new ArrayList<>();
